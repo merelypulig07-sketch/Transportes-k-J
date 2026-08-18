@@ -387,6 +387,7 @@ nav a:hover::after, nav a.active::after {
     padding: 5rem 3rem;
     border-radius: 12px;
     border: 2px solid var(--oro);
+    margin-top: 3rem;
 }
 
 .banner-inferior h2 {
@@ -406,6 +407,7 @@ footer {
     color: white;
     padding: 4rem 5% 2rem;
     border-top: 3px solid var(--oro);
+    margin-top: 3rem;
 }
 
 .footer-contenido {
