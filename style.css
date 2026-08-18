@@ -1,6 +1,5 @@
 /* =============================================
    ESTILOS — KIA & JOELOGÍSTICA S.A.
-   Inspirado en Andinave + colores del logo:
    Azul marino · Rojo elegante · Dorado
    ============================================= */
 
@@ -36,7 +35,7 @@ body {
 
 .etiqueta {
     display: inline-block;
-    color: var(--rojo-elegante);
+    color: var(--dorado);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -58,6 +57,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     position: sticky;
     top: 0;
@@ -73,6 +73,7 @@ header {
 .logo-img {
     height: 70px;
     width: auto;
+    border-radius: 4px;
 }
 
 .logo-texto h1 {
@@ -82,7 +83,7 @@ header {
 }
 
 .logo-texto h1 span {
-    color: var(--rojo-elegante);
+    color: var(--dorado);
 }
 
 .logo-texto p {
@@ -92,19 +93,19 @@ header {
 }
 
 nav a {
-    margin-left: 1.8rem;
+    margin-left: 1.2rem;
     text-decoration: none;
     color: var(--azul-medio);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.3s ease;
 }
 
 nav a:hover, nav a.active {
-    color: var(--rojo-elegante);
+    color: var(--dorado);
 }
 
-/* ---------------- PORTADA CON CARRUSEL ---------------- */
+/* ---------------- PORTADA CON CARRUSEL AUTOMÁTICO ---------------- */
 .hero {
     position: relative;
     min-height: 85vh;
@@ -129,16 +130,16 @@ nav a:hover, nav a.active {
 
 @keyframes carrusel {
     0% {
-        background-image: linear-gradient(rgba(10, 26, 47, 0.85), rgba(15, 42, 72, 0.90)), url('fondo.png');
+        background-image: linear-gradient(rgba(10, 26, 47, 0.75), rgba(10, 26, 47, 0.80)), url('fondo.png');
     }
     33% {
-        background-image: linear-gradient(rgba(10, 26, 47, 0.85), rgba(15, 42, 72, 0.90)), url('fondo2.jpeg');
+        background-image: linear-gradient(rgba(10, 26, 47, 0.75), rgba(10, 26, 47, 0.80)), url('fondo2.jpeg');
     }
     66% {
-        background-image: linear-gradient(rgba(10, 26, 47, 0.85), rgba(15, 42, 72, 0.90)), url('fondo3.jpeg');
+        background-image: linear-gradient(rgba(10, 26, 47, 0.75), rgba(10, 26, 47, 0.80)), url('fondo3.jpeg');
     }
     100% {
-        background-image: linear-gradient(rgba(10, 26, 47, 0.85), rgba(15, 42, 72, 0.90)), url('fondo.png');
+        background-image: linear-gradient(rgba(10, 26, 47, 0.75), rgba(10, 26, 47, 0.80)), url('fondo.png');
     }
 }
 
@@ -147,17 +148,18 @@ nav a:hover, nav a.active {
     z-index: 1;
     max-width: 650px;
     color: var(--blanco);
+    text-align: left;
 }
 
 .hero-contenido h2 {
-    font-size: 1.2rem;
-    color: var(--dorado);
-    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--blanco);
+    font-weight: 400;
     margin-bottom: 0.5rem;
 }
 
 .hero-contenido h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
 }
@@ -168,7 +170,7 @@ nav a:hover, nav a.active {
 
 .hero-contenido p {
     font-size: 1.1rem;
-    color: #ddd;
+    color: #e0e0e0;
     margin-bottom: 2.5rem;
     line-height: 1.8;
 }
@@ -180,35 +182,30 @@ nav a:hover, nav a.active {
 }
 
 .btn {
-    padding: 0.95rem 2.2rem;
+    padding: 1rem 2.5rem;
     border-radius: 4px;
     text-decoration: none;
     font-weight: 700;
     font-size: 1rem;
     transition: all 0.3s ease;
     display: inline-block;
+    border: none;
+    cursor: pointer;
 }
 
 .btn.principal {
-    background: linear-gradient(90deg, var(--rojo-elegante), #C42C3E);
-    color: var(--blanco);
-    box-shadow: 0 4px 15px rgba(178, 34, 52, 0.35);
+    background: var(--dorado);
+    color: var(--azul-oscuro);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 800;
 }
 
 .btn.principal:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(178, 34, 52, 0.45);
-}
-
-.btn.secundario {
-    border: 2px solid var(--dorado);
-    color: var(--dorado);
-    background: transparent;
-}
-
-.btn.secundario:hover {
-    background: var(--dorado);
-    color: var(--azul-oscuro);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.45);
+    background: var(--dorado-claro);
 }
 
 /* ---------------- DATOS DESTACADOS ---------------- */
@@ -231,13 +228,13 @@ nav a:hover, nav a.active {
 
 .dato .numero {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--dorado);
     margin-bottom: 0.5rem;
 }
 
-/* ---------------- QUIENES SOMOS ---------------- */
+/* ---------------- QUIENES SOMOS CON CARRUSEL ---------------- */
 .nosotros {
     padding: 5rem 5%;
     background: var(--blanco);
@@ -256,24 +253,67 @@ nav a:hover, nav a.active {
     color: var(--gris-texto);
 }
 
-.btn-enlace {
-    color: var(--rojo-elegante);
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 1rem;
-    transition: color 0.3s ease;
+.nosotros-carrusel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.btn-enlace:hover {
-    color: var(--dorado);
+.flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--azul-oscuro);
+    color: var(--blanco);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.3s ease;
 }
 
-.nosotros-imagen img {
+.flecha:hover {
+    background: var(--dorado);
+    color: var(--azul-oscuro);
+}
+
+.flecha.izq {
+    left: -10px;
+}
+
+.flecha.der {
+    right: -10px;
+}
+
+.carrusel-imagenes {
     width: 100%;
-    height: auto;
+    height: 380px;
+    position: relative;
     border-radius: 8px;
+    overflow: hidden;
     box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.carrusel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.carrusel-img.activa {
+    opacity: 1;
 }
 
 /* ---------------- SERVICIOS ---------------- */
@@ -293,7 +333,7 @@ nav a:hover, nav a.active {
     background: var(--blanco);
     padding: 2rem;
     border-radius: 8px;
-    border-top: 3px solid var(--rojo-elegante);
+    border-top: 3px solid var(--dorado);
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
 }
@@ -313,35 +353,105 @@ nav a:hover, nav a.active {
     font-size: 0.95rem;
 }
 
-/* ---------------- NUESTRA FLOTA / FOTOS ---------------- */
-.flota {
+/* ---------------- NUESTROS CLIENTES ---------------- */
+.clientes {
     padding: 5rem 5%;
-    background: var(--blanco);
+    background: linear-gradient(180deg, #fff, var(--gris-claro));
 }
 
-.flota .descripcion {
+.clientes .descripcion {
     max-width: 700px;
     color: #666;
     margin-bottom: 3rem;
 }
 
-.flota-fotos {
+.clientes-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
 }
 
-.foto-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+.cliente-card {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--dorado);
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
     transition: transform 0.3s ease;
 }
 
-.foto-item img:hover {
-    transform: scale(1.03);
+.cliente-card:hover {
+    transform: translateY(-8px);
+}
+
+.cliente-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+}
+
+.cliente-card p {
+    font-weight: 600;
+    color: var(--azul-oscuro);
+    font-size: 1.05rem;
+}
+
+/* ---------------- PREGUNTAS FRECUENTES ---------------- */
+.preguntas-seccion {
+    padding: 5rem 5%;
+    background: var(--blanco);
+}
+
+.preguntas-seccion .descripcion {
+    max-width: 700px;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+details.pregunta {
+    max-width: 800px;
+    margin: 0 auto 1rem;
+    padding: 1.5rem 1.8rem;
+    background: var(--blanco);
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+details.pregunta summary {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--azul-oscuro);
+    list-style: none;
+    position: relative;
+    padding-right: 2rem;
+}
+
+details.pregunta summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--dorado);
+    font-weight: 700;
+    transition: transform 0.25s ease;
+}
+
+details.pregunta[open] summary::after {
+    content: '−';
+}
+
+details.pregunta p {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    color: #555;
+    line-height: 1.7;
+    border-top: 1px solid #eee;
 }
 
 /* ---------------- CONTACTO ---------------- */
@@ -396,7 +506,7 @@ footer {
 }
 
 .footer-logo h3 span {
-    color: var(--rojo-elegante);
+    color: var(--dorado);
 }
 
 .footer-logo p {
@@ -454,18 +564,24 @@ footer {
 
 /* ---------------- RESPONSIVO ---------------- */
 @media(max-width: 1024px) {
-    .servicios-grid, .flota-fotos, .contacto-datos {
+    .servicios-grid, .clientes-grid, .contacto-datos {
         grid-template-columns: repeat(2, 1fr);
     }
     .nosotros .contenedor, .footer-contenido {
         grid-template-columns: 1fr;
     }
-    nav { display: none; }
+    .carrusel-imagenes { height: 300px; }
+    nav { margin-top: 0.5rem; }
+    .hero-contenido h1 { font-size: 2.5rem; }
 }
 
 @media(max-width: 600px) {
-    .servicios-grid, .flota-fotos, .contacto-datos {
+    .servicios-grid, .clientes-grid, .contacto-datos {
         grid-template-columns: 1fr;
     }
     .hero-contenido h1 { font-size: 2rem; }
+    .carrusel-imagenes { height: 250px; }
+    .flecha { width: 38px; height: 38px; }
+    .flecha.izq { left: 5px; }
+    .flecha.der { right: 5px; }
 }
