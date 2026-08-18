@@ -83,7 +83,7 @@ nav a:hover::after, nav a.active::after {
 
 .hero {
     background: linear-gradient(rgba(10, 22, 41, 0.75), rgba(15, 39, 68, 0.78)), 
-                url('Trailes-principal.png') center/cover no-repeat;
+                url('Trailers-principal.png') center/cover no-repeat;
     color: white;
     padding: 10rem 5%;
     background-attachment: fixed;
@@ -253,6 +253,7 @@ nav a:hover::after, nav a.active::after {
     box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
+/* ---------------- PREGUNTAS DESPLEGABLES ---------------- */
 .preguntas-seccion {
     padding: 5rem 5%;
     background: white;
@@ -272,25 +273,49 @@ nav a:hover::after, nav a.active::after {
     margin: 0 auto 3rem;
 }
 
-.pregunta {
+details.pregunta {
     max-width: 800px;
-    margin: 0 auto 1.5rem;
-    padding: 1.8rem;
-    background: #f8f9fa;
-    border-radius: 10px;
-    border-left: 4px solid var(--oro);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin: 0 auto 1rem;
+    padding: 1.5rem 1.8rem;
+    background: white;
+    border-radius: 0;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
 
-.pregunta h3 {
-    color: var(--azul-profundo);
+details.pregunta summary {
     font-size: 1.1rem;
-    margin-bottom: 0.8rem;
+    font-weight: 500;
+    color: var(--negro-elegante);
+    list-style: none;
+    position: relative;
+    padding-right: 2rem;
 }
 
-.pregunta p {
+details.pregunta summary::after {
+    content: '+';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+    color: var(--oro);
+    font-weight: 700;
+    transition: transform 0.25s ease;
+}
+
+details.pregunta[open] summary::after {
+    content: '−';
+    transform: translateY(-50%) rotate(180deg);
+}
+
+details.pregunta p {
+    margin-top: 1rem;
+    padding-top: 1rem;
     color: #555;
-    line-height: 1.6;
+    line-height: 1.7;
+    border-top: 1px solid #eee;
 }
 
 .socios-seccion {
