@@ -1,6 +1,6 @@
 /* =============================================
    ESTILOS — Transporte K&J
-   Paleta: Azul Marino + Dorado — Estilo Premium
+   Carrusel automático: fondo.png → fondo2.jpeg → fondo3.jpeg
    ============================================= */
 
 * {
@@ -81,16 +81,49 @@ nav a:hover::after, nav a.active::after {
     width: 100%;
 }
 
+/* ---------------- PORTADA CON CARRUSEL ---------------- */
 .hero {
-    background: linear-gradient(rgba(10, 22, 41, 0.75), rgba(15, 39, 68, 0.78)), 
-                url('Imagen de WhatsApp 2026-08-17 en 20.53.41.jpeg') center/cover no-repeat;
+    position: relative;
     color: white;
     padding: 10rem 5%;
-    background-attachment: fixed;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
+}
+
+.carrusel-fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    animation: carrusel 12s infinite;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+@keyframes carrusel {
+    0% {
+        background-image: linear-gradient(rgba(10, 22, 41, 0.75), rgba(15, 39, 68, 0.78)), url('fondo.png');
+    }
+    33% {
+        background-image: linear-gradient(rgba(10, 22, 41, 0.75), rgba(15, 39, 68, 0.78)), url('fondo2.jpeg');
+    }
+    66% {
+        background-image: linear-gradient(rgba(10, 22, 41, 0.75), rgba(15, 39, 68, 0.78)), url('fondo3.jpeg');
+    }
+    100% {
+        background-image: linear-gradient(rgba(10, 22, 41, 0.75), rgba(15, 39, 68, 0.78)), url('fondo.png');
+    }
+}
+
+.hero-contenido {
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
