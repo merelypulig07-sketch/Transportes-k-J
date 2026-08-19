@@ -12,7 +12,6 @@
 
 :root {
     --azul-oscuro: #0A1A2F;
-    --azul-medio: #0F2A48;
     --dorado: #D4AF37;
     --amarillo: #F0C808;
     --blanco: #FFFFFF;
@@ -49,7 +48,7 @@ h2 {
     line-height: 1.2;
 }
 
-/* ---------------- ENCABEZADO / BARRA DE NAVEGACIÓN ---------------- */
+/* ---------------- ENCABEZADO ---------------- */
 header {
     background: var(--azul-oscuro);
     padding: 1.2rem 5%;
@@ -88,7 +87,7 @@ nav a:hover, nav a.active {
     border-bottom: 2px solid var(--amarillo);
 }
 
-/* ---------------- PORTADA CON CARRUSEL AUTOMÁTICO ---------------- */
+/* ---------------- PORTADA CON CARRUSEL ---------------- */
 .hero {
     position: relative;
     min-height: 90vh;
@@ -177,7 +176,7 @@ nav a:hover, nav a.active {
     background: #e0b800;
 }
 
-/* ---------------- QUIENES SOMOS CON CARRUSEL ---------------- */
+/* ---------------- QUIÉNES SOMOS ---------------- */
 .nosotros {
     padding: 5rem 5%;
     background: var(--blanco);
